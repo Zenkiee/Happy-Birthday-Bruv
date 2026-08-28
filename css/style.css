@@ -177,7 +177,7 @@ button{font-family:inherit; cursor:pointer; border:none; background:none;}
   max-width:420px;
 }
 .card{
-  aspect-ratio:4/5;
+  aspect-ratio:3/5;
   perspective:900px;
 }
 .cardFlip{
