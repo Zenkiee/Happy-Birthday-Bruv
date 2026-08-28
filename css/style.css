@@ -86,6 +86,15 @@ button{font-family:inherit; cursor:pointer; border:none; background:none;}
   color:var(--blue-deep);
   margin-bottom:8px;
 }
+.tag-card{
+  margin-top:150px;
+  font-family:var(--font-mono);
+  font-size:0.68rem;
+  letter-spacing:0.2em;
+  text-transform:uppercase;
+  color:var(--blue-deep);
+  margin-bottom:8px;
+}
 .title{
   font-family:var(--font-display);
   font-weight:600;
