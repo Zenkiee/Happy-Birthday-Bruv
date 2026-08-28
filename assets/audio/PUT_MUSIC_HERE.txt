@@ -1,6 +1,0 @@
-Add your own legally-owned MP3 here, named exactly:
-
-white-ferrari.mp3
-
-Then delete this text file (or leave it, it won't affect anything).
-See the main README.md for details.

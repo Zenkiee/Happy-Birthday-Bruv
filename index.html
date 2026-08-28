@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>for bruv — happy birthday, Gemmaima</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>for bruv</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500;1,9..144,600&family=Quicksand:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -11,103 +11,152 @@
 </head>
 <body>
 
-<!-- floating ambient paws/hearts -->
-<div class="ambient" id="ambient" aria-hidden="true"></div>
+<div class="bgHearts" id="bgHearts" aria-hidden="true"></div>
 
-<!-- ============ HERO ============ -->
-<header class="hero" id="hero">
-  <p class="eyebrow">a small, unfinished website for</p>
-  <h1 class="hero-name">Gemmaima Pusa</h1>
-  <p class="hero-nickname">— my bruv —</p>
-  <p class="hero-sub">soft. joyful. caring. loving. full of surprises,<br>even from a whole timezone away.</p>
-  <button class="enter-btn" id="enterBtn">
-    <span class="paw-icon" aria-hidden="true">
-      <svg viewBox="0 0 100 100"><path d="M50 58c-14 0-26 12-26 24 0 8 6 12 14 12 6 0 9-3 12-3s6 3 12 3c8 0 14-4 14-12 0-12-12-24-26-24z"/><ellipse cx="22" cy="42" rx="9" ry="12"/><ellipse cx="42" cy="28" rx="9" ry="13"/><ellipse cx="58" cy="28" rx="9" ry="13"/><ellipse cx="78" cy="42" rx="9" ry="12"/></svg>
-    </span>
-    open your birthday, bruv
-  </button>
-  <div class="scroll-cue" aria-hidden="true">↓</div>
-</header>
+<div class="wrapper">
 
-<!-- ============ LIVE COUNTER ============ -->
-<section class="counter-section" id="counter-section">
-  <p class="section-eyebrow">still counting</p>
-  <h2 class="section-title">every second of you, so far</h2>
-  <p class="section-blurb">since 31 August 2005, this is how long you've been turning hard days into soft ones.</p>
+  <main class="slides">
 
-  <div class="counter-grid" id="ageCounter">
-    <div class="counter-cell"><span class="counter-num" data-unit="years">0</span><span class="counter-label">years</span></div>
-    <div class="counter-cell"><span class="counter-num" data-unit="months">0</span><span class="counter-label">months</span></div>
-    <div class="counter-cell"><span class="counter-num" data-unit="days">0</span><span class="counter-label">days</span></div>
-    <div class="counter-cell"><span class="counter-num" data-unit="hours">0</span><span class="counter-label">hours</span></div>
-    <div class="counter-cell"><span class="counter-num" data-unit="minutes">0</span><span class="counter-label">min</span></div>
-    <div class="counter-cell"><span class="counter-num" data-unit="seconds">0</span><span class="counter-label">sec</span></div>
-  </div>
-  <p class="counter-caption">and counting. always.</p>
+    <section class="slide show" id="slide-intro">
+      <p class="tag">happy birthday to</p>
+      <h1 class="title">Gemmaima <span class="nick">— bruv</span></h1>
+      <p class="introText">soft. joyful. caring. loving. full of surprises, even from a whole timezone away.</p>
+      <button class="nextBtn" data-next="slide-cake">begin</button>
+      <audio id="bgSong" loop autoplay muted playsinline>
+        <source src="assets/audio/happy-birthday.mp3" type="audio/mpeg">
+      </audio>
+    </section>
 
-  <div class="birthday-countdown" id="birthdayCountdown">
-    <p class="countdown-label" id="countdownLabel">counting down to your day</p>
-    <p class="countdown-value" id="countdownValue">—</p>
-  </div>
-</section>
+    <section class="slide" id="slide-cake">
+      <p class="tag">make a wish</p>
+      <h2 class="heading">go on, bruv</h2>
 
-<!-- ============ SURPRISE TRAIL ============ -->
-<section class="trail-section" id="trail-section">
-  <p class="section-eyebrow">tap around</p>
-  <h2 class="section-title">a trail of little surprises</h2>
-  <p class="section-blurb">every paw and heart is hiding something. you know how you love finding things — go find them.</p>
+      <div class="cakeWrap" id="cakeWrap">
+        <span class="flame f1">🔥</span>
+        <span class="flame f2">🔥</span>
+        <span class="flame f3">🔥</span>
+        <span class="cakeEmoji">🎂</span>
+      </div>
+      <button class="blowBtn" id="blowBtn">blow out the candles</button>
 
-  <div class="trail-grid" id="trailGrid"></div>
-</section>
+      <div class="slideNav">
+        <button class="backBtn" data-back="slide-intro">back</button>
+        <button class="nextBtn" data-next="slide-time">next</button>
+      </div>
+    </section>
 
-<!-- ============ GRATITUDE LETTER ============ -->
-<section class="letter-section" id="letter-section">
-  <p class="section-eyebrow">before you go</p>
-  <h2 class="section-title">one more letter</h2>
-  <div class="letter-wrap" id="letterWrap">
-    <button class="letter-seal" id="letterSeal">
-      <span class="paw-icon small" aria-hidden="true">
-        <svg viewBox="0 0 100 100"><path d="M50 58c-14 0-26 12-26 24 0 8 6 12 14 12 6 0 9-3 12-3s6 3 12 3c8 0 14-4 14-12 0-12-12-24-26-24z"/><ellipse cx="22" cy="42" rx="9" ry="12"/><ellipse cx="42" cy="28" rx="9" ry="13"/><ellipse cx="58" cy="28" rx="9" ry="13"/><ellipse cx="78" cy="42" rx="9" ry="12"/></svg>
-      </span>
-      break the seal
-    </button>
-    <article class="letter-body" id="letterBody">
-      <p>bruv,</p>
-      <p>we've met exactly once. six days, one timezone shared instead of two, and somehow it was enough to know. everything since has been video calls at odd hours, "good morning" texts that are actually "goodnight" texts, and loving someone mostly through a screen — and still, it's you.</p>
-      <p>I don't think you fully see what I see. someone who went through things that could've hardened her, and came out soft anyway. someone who kept choosing joy on purpose, kept caring about people who weren't always careful with her back, kept being someone worth crossing a distance for.</p>
-      <p>so happy birthday. thank you for every struggle you turned into a lesson instead of a wall. thank you for still being full of surprises, even now, even to me. I hope this whole silly little website made you smile at least once — that was the entire plan.</p>
-      <p>here's to the next year of your life, and the next chance I get to be in the same room as you again.</p>
-      <p class="letter-sign">— always, for you</p>
-    </article>
-  </div>
-</section>
+    <section class="slide" id="slide-time">
+      <p class="tag">still counting</p>
+      <h2 class="heading">every second of you, so far</h2>
 
-<!-- ============ FOOTER / MUSIC ============ -->
-<footer class="site-footer">
-  <p>made for gemmaima, by someone who's very glad you exist.</p>
-</footer>
+      <div class="stats" id="stats">
+        <div class="stat"><span class="num" data-unit="years">0</span><span class="unit">years</span></div>
+        <div class="stat"><span class="num" data-unit="months">0</span><span class="unit">months</span></div>
+        <div class="stat"><span class="num" data-unit="days">0</span><span class="unit">days</span></div>
+        <div class="stat"><span class="num" data-unit="hours">0</span><span class="unit">hrs</span></div>
+        <div class="stat"><span class="num" data-unit="minutes">0</span><span class="unit">min</span></div>
+        <div class="stat"><span class="num" data-unit="seconds">0</span><span class="unit">sec</span></div>
+      </div>
 
-<!-- music player -->
-<div class="music-player" id="musicPlayer">
-  <button class="music-toggle" id="musicToggle" aria-label="play background music">
-    <span class="music-icon" id="musicIcon">♪</span>
-  </button>
-  <span class="music-label">white ferrari</span>
-  <audio id="bgMusic" loop preload="none">
-    <source src="assets/audio/white-ferrari.mp3" type="audio/mpeg">
-  </audio>
+      <button class="countdown" id="countdown">
+        <span id="countdownTag">counting down to your day</span>
+        <strong id="countdownValue">—</strong>
+      </button>
+
+      <div class="slideNav">
+        <button class="backBtn" data-back="slide-cake">back</button>
+        <button class="nextBtn" data-next="slide-surprise">next</button>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-surprise">
+      <p class="tag">tap one</p>
+      <h2 class="heading">a little surprise, every time</h2>
+      <div class="cards" id="cards"></div>
+
+      <div class="slideNav">
+        <button class="backBtn" data-back="slide-time">back</button>
+        <button class="nextBtn" data-next="slide-favorites">next</button>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-favorites">
+      <p class="tag">all your favorites</p>
+      <h2 class="heading">the things that are so you</h2>
+
+      <div class="colors">
+        <span class="dot" style="background:#AECBE3">blue</span>
+        <span class="dot" style="background:#FFFFFF; color:#4F7A9C;">white</span>
+        <span class="dot" style="background:#E496AF">pink</span>
+      </div>
+
+      <div class="chips">
+        <div class="chip">🐱 cats</div>
+        <div class="chip">🐶 dogs</div>
+      </div>
+
+      <div class="song">
+        <button class="playBtn" id="playBtn" aria-label="play White Ferrari">
+          <span id="playIcon">♪</span>
+        </button>
+        <div class="songInfo">
+          <span class="songName">White Ferrari</span>
+          <span class="songTag">your favorite song</span>
+        </div>
+        <audio id="bgMusic" loop preload="none">
+          <source src="assets/audio/white-ferrari.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+
+      <div class="slideNav">
+        <button class="backBtn" data-back="slide-surprise">back</button>
+        <button class="nextBtn" data-next="slide-letter">next</button>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-letter">
+      <p class="tag">for you</p>
+      <h2 class="heading">one more thing</h2>
+
+      <button class="sealBtn" id="sealBtn">break the seal</button>
+      <article class="letter" id="letter">
+        <p>bruv,</p>
+        <p>we've met exactly once. six days, one timezone shared instead of two, and somehow it was enough to know. everything since has been video calls at odd hours and loving someone mostly through a screen — and still, it's you.</p>
+        <p>you went through things that could've hardened you, and came out soft anyway. you kept choosing joy on purpose, kept caring about people who weren't always careful with you back, kept being someone worth crossing a distance for.</p>
+        <p>happy birthday. thank you for turning every struggle into a lesson instead of a wall. here's to the next year of your life, and the next chance I get to be in the same room as you again.</p>
+        <p class="sign">— always, for you</p>
+      </article>
+
+      <div class="slideNav">
+        <button class="backBtn" data-back="slide-favorites">back</button>
+        <button class="nextBtn" data-next="slide-end">next</button>
+      </div>
+    </section>
+
+    <section class="slide" id="slide-end">
+      <p class="tag">that's it</p>
+      <h2 class="heading">happy birthday, bruv</h2>
+      <p class="introText">go back through it as many times as you want.</p>
+      <button class="backBtn" data-back="slide-intro">start over</button>
+      <div class="confettiBtn">
+        <button class="nextBtn" id="oneMoreBtn">one more surprise</button>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="progress" id="progress"></div>
+
 </div>
 
-<!-- surprise modal -->
-<div class="modal-overlay" id="modalOverlay">
-  <div class="modal-card" id="modalCard">
-    <button class="modal-close" id="modalClose" aria-label="close">×</button>
-    <p class="modal-text" id="modalText"></p>
+<div class="overlay" id="overlay">
+  <div class="popup" id="popup">
+    <button class="closeBtn" id="closeBtn" aria-label="close">×</button>
+    <p class="popupText" id="popupText"></p>
   </div>
 </div>
 
-<!-- birthday confetti canvas -->
-<canvas id="confettiCanvas"></canvas>
+<canvas id="confetti"></canvas>
 
 <script src="js/script.js"></script>
 </body>

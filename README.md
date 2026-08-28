@@ -1,42 +1,34 @@
-# for bruv 🐾💙
+# for bruv
 
-A little interactive birthday website for Gemmaima — a live "time she's been alive" counter, a countdown to August 31st, a trail of tap-to-reveal surprise notes, and a letter that unseals on click.
+An interactive one-screen birthday site for Gemmaima. Everything lives in a single view — a live "time she's been alive" counter, a countdown to August 31st, tap-to-reveal surprise cards, a favorites showcase, and a letter — switched between with the bottom tab bar. No scrolling through sections.
 
 ## File structure
 ```
 gemmaima-birthday/
 ├── index.html
-├── css/
-│   └── style.css
-├── js/
-│   └── script.js
-└── assets/
-    └── audio/        ← put your music file here (see below)
+├── css/style.css
+├── js/script.js
+└── assets/audio/   ← add your music file here
 ```
 
-## Before you publish: add the music
-I can't include the actual "White Ferrari" audio file — it's a copyrighted commercial recording, so I'm not able to source or embed it for you. The player is already wired up and ready:
+## Add the music
+There are two audio slots, and neither track is included — both are commercial recordings, so they can't be embedded here directly. To finish it:
 
-1. Add your own legally-owned copy of the track as an MP3.
-2. Name it `white-ferrari.mp3`.
-3. Drop it into `assets/audio/`.
+1. Add your own legally-owned MP3s.
+2. Name them exactly `happy-birthday.mp3` and `white-ferrari.mp3`.
+3. Put both in `assets/audio/`.
 
-The ♪ button in the bottom-right corner will play/pause it automatically once the file is there. If the folder's empty, tapping ♪ will just show a friendly reminder instead of failing silently.
+`happy-birthday.mp3` is the looping background track — it starts automatically. `white-ferrari.mp3` plays on demand from the ♪ button on the Favorites slide.
 
-(A safer long-term option if you're hosting this publicly on GitHub Pages: swap in an instrumental/lo-fi cover, or a track you have rights to use, so you don't run into copyright takedowns on a public repo.)
+**About the autoplay:** browsers block audio with sound from playing until the visitor has interacted with the page at least once — no site can override that, it's a browser-level rule, not something in this code. The site works around it as closely as it can: the background track loads muted and starts immediately, then unmutes itself the instant she does anything at all — the first click, tap, or key press anywhere on the page, including just tapping "begin" on the opening slide. So in practice it plays itself the moment she starts looking at the site, without a dedicated play button.
 
-## How to put it on GitHub
-1. Create a new repo (e.g. `for-bruv`).
-2. Upload everything inside `gemmaima-birthday/` to the repo root (keep the folder structure).
-3. In the repo, go to **Settings → Pages**, set the source to your main branch, root folder.
-4. GitHub gives you a live link like `https://yourusername.github.io/for-bruv/` — that's what you send her.
+## Publish on GitHub Pages
+1. Create a repo, upload everything in `gemmaima-birthday/` to the root (keep the folder structure).
+2. Settings → Pages → set source to your main branch, root folder.
+3. Your link: `https://yourusername.github.io/reponame/`
 
-## What's customizable
-- **Messages**: edit the `messages` array near the top of `js/script.js` — that's the pool the surprise trail pulls from.
-- **The letter**: edit the text directly inside `#letterBody` in `index.html`.
-- **Colors**: all defined as CSS variables at the top of `css/style.css` (`--pink-deep`, `--blue-soft`, etc.) if you ever want to retheme it.
-- **Birth date / countdown**: set via `BIRTH_DATE` at the top of `js/script.js` — currently `2005-08-31`.
-
-Everything else (the counter, the countdown, the confetti, the flip cards) runs live off her actual birth date, so it'll stay accurate for as long as the site's up.
-
-Happy birthday to her. 🎂
+## Customizing
+- **Surprise messages** — edit the `messages` array in `js/script.js`.
+- **Letter text** — edit `#letterBody` in `index.html`.
+- **Birth date** — `BIRTH_DATE` at the top of `js/script.js`.
+- **Colors** — CSS variables at the top of `css/style.css`.
