@@ -2,10 +2,10 @@ const birthDate = new Date('2005-08-31T00:00:00');
 
 (function(){
   const wrap = document.getElementById('bgHearts');
-  const total = window.innerWidth < 600 ? 10 : 18;
+  const total = window.innerWidth < 600 ? 20 : 34;
   for(let i=0;i<total;i++){
     const el = document.createElement('span');
-    const isBalloon = i % 3 === 0;
+    const isBalloon = i % 2 === 0;
     el.textContent = isBalloon ? '🎈' : '♥';
     el.className = isBalloon ? 'balloon' : 'heart';
     el.style.left = Math.random()*100 + 'vw';
@@ -119,15 +119,15 @@ document.getElementById('countdown').addEventListener('click', ()=>{
 });
 
 const notes = [
-  "Six days is all the time we've ever had in the same room — and it was enough to know I wanted the rest, even from far away.",
+  "Our memories will always have a place in my heart, and it was enough to know I wanted the rest, even from far away.",
   "You call it distance. I call it the space where I got really good at missing someone on purpose.",
-  "You're soft in a world that kept asking you to be hard. That's not weakness — that's you winning, every day.",
-  "Every struggle you've walked through, and you still choose kindness after. That's the bravest thing I've seen.",
-  "Somewhere out there a cat and a dog are best friends, purely out of spite for logic. That's us, kind of.",
-  "Happy birthday to the girl who turned 'long distance' into 'long story, still going.'",
-  "You are the most surprising person I've ever loved — I built you a whole website just to prove it.",
-  "I don't need a reason to be grateful you exist. But if you need one written down: this page is it.",
-  "Blue for the calm you carry. White for how honest you are. Pink for how soft your heart stayed."
+  "You're soft in a world that kept asking you to be hard. That's not weakness. That's you winning, every day.",
+  "Every struggle you've walked through, yet still standing and choosing kindness after. That's the bravest thing I've ever seen.",
+  "To meet you is a blessing. To love you is a gift. To be with you is a privilege. Happy birthday, bruv.",
+  "Happy birthday to the woman who turned every day into a celebration of love, laughter, and light.",
+  "I want to remind you of how amazing person you are. The traits and personality that makes you unique.",
+  "I have every reason to be grateful you exist. and I hope you find it in this website.",
+  "Blue for the calm you carry. White for how honest you are. Pink for how soft your heart is."
 ];
 const faceIcons = ['♥','✦','☺','♥','✦','☺','♥','✦','☺'];
 
@@ -175,7 +175,7 @@ if(blowBtn){
     const rect = document.getElementById('cakeWrap').getBoundingClientRect();
     balloonBurst(rect.left + rect.width/2, rect.top);
     fireConfetti(3000);
-    openPopup('whatever you wished for, bruv — I hope it comes true.');
+    openPopup('Happy birthday! I hope your wish comes true. I love you always, in all ways.');
   });
 }
 
@@ -183,7 +183,8 @@ const oneMoreBtn = document.getElementById('oneMoreBtn');
 if(oneMoreBtn){
   oneMoreBtn.addEventListener('click', (e)=>{
     balloonBurst(e.clientX, e.clientY);
-    fireConfetti(3500);
+    fireConfetti(4000);
+    document.getElementById('surprisePhoto').classList.add('show');
   });
 }
 
@@ -293,7 +294,7 @@ const playIcon = document.getElementById('playIcon');
 playBtn.addEventListener('click', ()=>{
   if(music.paused){
     music.play().catch(()=>{
-      openPopup("add your own White Ferrari mp3 to assets/audio/ — see the README.");
+      openPopup("no music available");
     });
     playIcon.textContent = '❚❚';
     playBtn.classList.add('playing');
