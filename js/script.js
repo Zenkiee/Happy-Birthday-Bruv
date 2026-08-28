@@ -126,9 +126,10 @@ const notes = [
   "To meet you is a blessing. To love you is a gift. To be with you is a privilege. Happy birthday, bruv.",
   "Happy birthday to the woman who turned every day into a celebration of love, laughter, and light.",
   "I want to remind you of how amazing person you are. The traits and personality that makes you unique.",
+  "I have every reason to be grateful you exist. and I hope you find it in this website.",
   "Blue for the calm you carry. White for how honest you are. Pink for how soft your heart is."
 ];
-const faceIcons = ['♥','✦','♥','✦','♥','✦','♥','✦'];
+const faceIcons = ['♥','✦','☺','♥','✦','☺','♥','✦','☺'];
 
 (function(){
   const grid = document.getElementById('cards');
