@@ -267,9 +267,9 @@ button{font-family:inherit; cursor:pointer; border:none; background:none;}
 .sealBtn:hover{transform:translateY(-2px);}
 .sealBtn.hidden{display:none;}
 .letter{
-  margin-top:20px;
+  margin-top:60px;
   max-width:46ch;
-  text-align:left;
+  text-align:justify;
   background:var(--cream-deep);
   border-radius:22px;
   padding:clamp(18px,4vw,28px);
