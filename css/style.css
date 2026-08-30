@@ -427,10 +427,9 @@ button{font-family:inherit; cursor:pointer; border:none; background:none;}
     padding-top:4vh; padding-bottom:4vh;
   }
   .slides{min-height:520px;}
-  
+  .card{aspect-ratio:3/5;}
 }
 @media (max-height:600px){
   .slide{padding-top:50px;}
   .heading{margin-bottom:50px;}
-  .card{aspect-ratio:3/5;}
 }
