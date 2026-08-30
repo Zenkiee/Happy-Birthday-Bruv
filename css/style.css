@@ -434,5 +434,5 @@ button{font-family:inherit; cursor:pointer; border:none; background:none;}
 }
 
 @media (max-width: 600px){
-.card{aspect-ratio:4/5;}
+.card{aspect-ratio:3/5;}
 }
