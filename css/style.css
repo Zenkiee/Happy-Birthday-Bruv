@@ -433,6 +433,6 @@ button{font-family:inherit; cursor:pointer; border:none; background:none;}
   .heading{margin-bottom:50px;}
 }
 
-@media (max-width: 600px){
+@media (max-width:600px){
 .card{aspect-ratio:3/5;}
 }
