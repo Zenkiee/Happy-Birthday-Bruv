@@ -431,5 +431,8 @@ button{font-family:inherit; cursor:pointer; border:none; background:none;}
 @media (max-height:600px){
   .slide{padding-top:50px;}
   .heading{margin-bottom:50px;}
-  .card{aspect-ratio:4/5;}
+}
+
+@media (max-width: 600px){
+.card{aspect-ratio:4/5;}
 }
