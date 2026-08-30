@@ -312,9 +312,9 @@ button{font-family:inherit; cursor:pointer; border:none; background:none;}
   transition:opacity 0.5s ease, transform 0.5s ease;
   animation:flicker 1.6s ease-in-out infinite;
 }
-.flame.f1{left:32%;}
-.flame.f2{left:48%; top:-14px;}
-.flame.f3{left:63%;}
+.flame.f1{left:25%;}
+.flame.f2{left:41%; top:-10px;}
+.flame.f3{left:60%;}
 .flame.out{opacity:0; transform:translateY(-6px) scale(0.4);}
 @keyframes flicker{0%,100%{transform:scale(1) rotate(-2deg);} 50%{transform:scale(1.1) rotate(2deg);}}
 .blowBtn{
