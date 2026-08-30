@@ -1,5 +1,7 @@
 const birthDate = new Date('2005-08-31T00:00:00');
 
+let confettiRunning = false;
+
 (function(){
   const wrap = document.getElementById('bgHearts');
   const total = window.innerWidth < 600 ? 20 : 34;
@@ -241,7 +243,7 @@ function spark(x, y){
   }
 }
 
-let confettiRunning = false;
+
 function fireConfetti(duration = 5000){
   if(confettiRunning) return;
   confettiRunning = true;
