@@ -121,7 +121,7 @@ document.getElementById('countdown').addEventListener('click', ()=>{
 const notes = [
   "Our memories will always have a place in my heart, and it was enough to know I wanted the rest, even from far away.",
   "You call it distance. I call it the space where I got really good at missing someone on purpose.",
-  "I hope that you continue to shine bright and inspire those around you.",
+  "Mahal na mahal kita. I love you more than words can say, and I hope you feel it every day.",
   "Every struggle you've walked through, yet still standing and choosing kindness after. That's the bravest thing I've ever seen.",
   "To meet you is a blessing. To love you is a gift. To be with you is a privilege. Happy birthday, bruv.",
   "Happy birthday to the woman who turned every day into a celebration of love, laughter, and light.",
