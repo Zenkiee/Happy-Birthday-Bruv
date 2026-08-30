@@ -1,4 +1,4 @@
-const birthDate = new Date('2005-08-31T01:00:00');
+const birthDate = new Date('2005-08-31T00:00:00');
 
 (function(){
   const wrap = document.getElementById('bgHearts');
